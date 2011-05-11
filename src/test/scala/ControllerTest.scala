@@ -1,7 +1,7 @@
 package com.example
 
 import org.scalatest.Suite
-import com.borachio.MockFactory
+import com.borachio.scalatest.MockFactory
 import scala.math.{Pi, sqrt}
 
 class MockFunctionTest extends Suite with MockFactory {
@@ -15,7 +15,7 @@ class MockFunctionTest extends Suite with MockFactory {
       mockTurtle expects 'getAngle returning 0.0
       mockTurtle expects 'penUp
       mockTurtle expects 'turn withArgs (~(Pi / 4))
-      mockTurtle expects 'forward withArgs (~sqrt(4.0))
+      mockTurtle expects 'forward withArgs (~sqrt(2.0))
       mockTurtle expects 'getAngle returning Pi / 4
       mockTurtle expects 'turn withArgs (~(-Pi / 4))
       mockTurtle expects 'penDown
